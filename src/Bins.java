@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
+import java.util.function.Function;
 
 
 /**
@@ -37,6 +38,10 @@ public class Bins {
             total += d;
         }
         return total;
+    }
+    
+    private List<Integer> fitDisksAndPrint(List<Integer> list, Function<List<Integer>,List<Integer>> function){
+    	return function.apply(list);
     }
 
     // add files to the collection of Disks
